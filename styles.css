@@ -309,6 +309,7 @@ a {
 .budget {
 	margin-top: 25px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 /**
