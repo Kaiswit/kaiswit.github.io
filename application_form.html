@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="PickMeUp-master/css/pickmeup.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="mobile-container main__content main__content--application-form">
+		<div class="label">Мне нужно</div>
+		<input class="form__input" placeholder="Опишите Вашу задачу">
+		<div class="label">Когда</div>
+		<div class="calendar__wrapper">
+			<input class="form__input js-calendar">
+		</div>
+		<div class="label">Бюджет:</div>
+		<div class="budget">
+			<div class="works-budget">
+				<span>Работ</span>
+				<div class="range-filter">
+		            <div class="range-controls">
+		                <div class="scale">
+		                	<div class="bar"></div>
+		                </div>
+		                <div class="toggle min-toggle js-works-min-toggle">
+		                	<span class="min-price">0p.</span>
+		                </div>
+		                <div class="you-toggle js-works-you-toggle">
+		                	<span class="you-price js-works-you-price">500p.</span></div>
+		                <div class="toggle max-toggle js-works-max-toggle">
+		                	<img class="ic" src="inf.png">
+		                </div>
+		            </div>
+	        	</div>
+			</div>
+			<div class="materials-budget">
+				<span>Материалов</span>
+				<div class="range-filter">
+		            <div class="range-controls">
+		                <div class="scale">
+		                	<div class="bar"></div>
+		                </div>
+		                <div class="toggle min-toggle js-materials-min-toggle">
+		                	<span class="min-price">0p.</span>
+		                </div>
+		                <div class="you-toggle js-materials-you-toggle">
+		                	<span class="you-price js-materials-you-price">1000p.</span></div>
+		                <div class="toggle max-toggle js-materials-max-toggle">
+		                	<img class="ic" src="inf.png">
+		                </div>
+		            </div>
+	        	</div>
+			</div>
+		</div>
+		<div class="label">Дополнительно:</div>
+		<div class="optional__section">
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing1' id="thing1" checked="" /><label for="thing1"></label>
+				<span>Закупить</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing2' id="thing2"/><label for="thing2"></label>
+				<span>Демонтаж</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing3' id="thing3"/><label for="thing3"></label>
+				<span>Команда</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing4' id="thing4"/><label for="thing4"></label>
+				<span>Разгрузить</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing5' id="thing5"/><label for="thing5"></label>
+				<span>Уборка</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing6' id="thing6"/><label for="thing6"></label>
+				<span>Техника</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing7' id="thing7"/><label for="thing7"></label>
+				<span>Погрузка/разгрузка</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing8' id="thing8"/><label for="thing8"></label>
+				<span>Вывоз мусора</span>
+			</div>
+			<div class="checkbox__wrapper">
+				<input type='checkbox' name='thing9' id="thing9"/><label for="thing9"></label>
+				<span>Инструмент</span>
+			</div>
+		</div>
+		<div class="media__section">
+			<div class="media__photo">
+				<div class="label">Фото</div>
+				<img class="ic" src="Gallery_ic.png">
+				<img class="ic" src="Gallery_ic.png">
+			</div>
+			<div class="media__video">
+				<div class="label">Видео</div>
+				<img class="ic" src="Gallery_ic.png">
+			</div>
+		</div>
+		<a class="application-form__btn btn--yellow" href="choose_action.html" target="_blank">Опубликовать</a>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="PickMeUp-master/dist/pickmeup.min.js"></script>
+	<script type="text/javascript">
+    pickmeup('.js-calendar', {
+        locale  : 'ru',
+        prev    : '&#xf104;',
+        next    : '&#xf105;',
+    });
+    $(".js-calendar").trigger( "click" );
+
+    $(".js-works-max-toggle").click(function(){
+	    if ($(".js-works-you-toggle").position().left < 110) {
+	    	$(".js-works-you-toggle").css("left", $(".js-works-you-toggle").position().left + 15);
+	    	$(".js-works-you-price").text(parseInt($(".js-works-you-price").html()) + 100 + "p.");
+	    } else {
+	    	return false;
+	    }
+    })
+    $(".js-works-min-toggle").click(function(){
+	    if ($(".js-works-you-toggle").position().left > 43) {
+	    	$(".js-works-you-toggle").css("left", $(".js-works-you-toggle").position().left - 15);
+	    	$(".js-works-you-price").text(parseInt($(".js-works-you-price").html()) - 100 + "p.");
+	    } else {
+	    	return false;
+	    }
+    });
+
+    $(".js-materials-max-toggle").click(function(){
+	    if ($(".js-materials-you-toggle").position().left < 110) {
+	    	$(".js-materials-you-toggle").css("left", $(".js-materials-you-toggle").position().left + 15);
+	    	$(".js-materials-you-price").text(parseInt($(".js-materials-you-price").html()) + 1000 + "p.");
+	    } else {
+	    	return false;
+	    }
+    })
+    $(".js-materials-min-toggle").click(function(){
+	    if ($(".js-materials-you-toggle").position().left > 43) {
+	    	$(".js-materials-you-toggle").css("left", $(".js-materials-you-toggle").position().left - 15);
+	    	$(".js-materials-you-price").text(parseInt($(".js-materials-you-price").html()) - 1000 + "p.");
+	    } else {
+	    	return false;
+	    }
+    })
+	</script>
+</body>
+</html>

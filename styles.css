@@ -1,0 +1,576 @@
+body {
+	background: #FFCC33;
+	font-family: Comic Sans MS, Lato;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.mobile-container {
+	max-width: 426px;
+	margin: auto;
+}
+/**
+ * Page One
+ * Who you are?
+ */
+.main__content {
+	padding: 70px 0;
+}
+.content-indent {
+	padding: 50px 0;
+}
+.main__logo {
+	display: block;
+	margin: auto;
+	margin-bottom: 70px;
+}
+.main__btn {
+	display: block;
+	margin: 0px auto 20px;
+	border-radius: 8px;
+	padding: 20px 0;
+	width: 183px;
+	text-align: center;
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn--red {
+	background: #ED1C24;
+}
+.btn--red:hover {
+	background: #D3161D;
+}
+.btn--black {
+	background: #333333;
+}
+.btn--black:hover {
+	background: #383636;
+}
+.btn--yellow {
+	background: #FD9B07;
+}
+.btn--yellow:hover {
+	background: #F3970C;
+}
+/**
+ * Page Two
+ * Problem
+ */
+.problem__h2 {
+	font-weight: normal;
+	text-align: center;
+	margin: 0 auto;
+}
+.problem__img {
+	display: block;
+	margin: 70px auto;
+	width: 321px;
+}
+.schema-interactive {
+	position: relative;
+	margin: auto;
+	width: 321px;
+}
+.problem__zone {
+	position: absolute;
+	z-index: 5;
+}
+.zone--garage {
+    left: 17px;
+    bottom: 50px;
+    top: 219px;
+    right: 222px;
+}
+.problem__zone:hover {
+	background: #ED1C24;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.zone--kitchen {
+	left: 100px;
+    bottom: 50px;
+    top: 219px;
+    right: 77px;
+}
+.zone--podval {
+	left: 100px;
+    bottom: 0;
+    top: 268px;
+    right: 77px;
+}
+.zone--terrace {
+	left: 244px;
+    bottom: 50px;
+    top: 168px;
+    right: 1px;
+}
+.zone--balcony {
+	left: 244px;
+    bottom: 150px;
+    top: 119px;
+    right: 1px;
+}
+.zone--guests {
+	left: 100px;
+    bottom: 99px;
+    top: 168px;
+    right: 77px;
+}
+.zone--wc {
+    left: 100px;
+    bottom: 149px;
+    top: 118px;
+    right: 160px;
+}
+.zone--wardrobe {
+    left: 162px;
+    bottom: 149px;
+    top: 118px;
+    right: 78px;
+}
+.zone--sleeping {
+    left: 100px;
+    bottom: 199px;
+    top: 69px;
+    right: 77px;
+}
+.zone--cherdak {
+	top: 0px;
+    right: 76px;width: 0;
+    height: 0;
+    border-left: 73px solid transparent;
+    border-right: 73px solid transparent;
+    border-bottom: 68px solid transparent;
+}
+.zone--cherdak:hover {
+	background: transparent;
+	border-bottom-color: #ED1C24;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+/**
+ * Page Four
+ * Make Photo
+ */
+.upper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 25px;
+}
+.settings-ic:hover {
+	transform: rotate(180deg);
+	transition: 1s ease-in-out;
+	cursor: pointer;
+}
+.next-btn {
+	display: block;
+	text-decoration: none;
+	font-size: 17px;
+	cursor: pointer;
+	color: inherit;
+}
+.middle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.make-photo__title {
+	color: #000;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+	margin: 50px auto;
+	max-width: 200px;
+	text-align: center;
+}
+.bottom {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 100px 25px 0;
+}
+.ic:hover {
+	cursor: pointer;
+}
+/**
+ * Page Five
+ * Application Form
+ */
+.main__content--application-form {
+	margin: 0 25px;
+}
+.form__input {
+	display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    margin: 10px auto;
+    outline: none;
+}
+.form__input::-webkit-input-placeholder {
+	color: #ACACAC;
+}
+.pickmeup.pmu-view-days {
+	display: block !important;
+}
+.calendar__wrapper {
+	height: 295px;
+}
+.label {
+	font-size: 17px;
+	line-height: 24px;
+}
+/**
+ * Price filters
+ */
+.range-filter {
+    padding-top:10px;
+    width:166px;
+    margin-bottom:10px;
+}
+.range-controls {
+    position:relative;
+    height:80px;
+    margin-bottom:15px;
+    border-radius:5px;
+    overflow:hidden;
+}
+.scale {
+    margin-top:39px;
+    height:2px;
+    background:#d7dcde;
+}
+.bar{
+    height:2px;
+    background:#FD8407;
+}
+.toggle {
+    position:absolute;
+    top: 34px;
+    left: 25px;
+    width: 9px;
+    height: 9px;
+    border:1px solid #FD8407;
+    background:#FFCC33;
+    cursor:pointer;
+    border-radius:50%;
+}
+.min-toggle {
+    left: 0;
+}
+.min-toggle .min-price {
+	font-size: 11px;
+    width: 20px;
+    position: absolute;
+    top: 14px;
+}
+.max-toggle {
+    left: 155px;
+}
+.max-toggle .ic {
+	position: absolute;
+    right: 0;
+    top: 14px;
+}
+.you-toggle {
+	position: absolute;
+	width: 2px;
+	height: 12px;
+	background:#FD8407;
+	left: 43px;
+	top: 34px;
+	cursor: pointer;
+}
+.you-toggle .you-price {
+	font-size: 11px;
+    width: 20px;
+    position: absolute;
+    top: 14px;
+    right: -6px;
+}
+/**
+ * Budget block
+ */
+.budget {
+	margin-top: 25px;
+	display: flex;
+	justify-content: space-between;
+}
+/**
+ * Checkboxes
+ */
+input[type=checkbox] {
+	display:none;
+}
+input[type=checkbox] + label {
+	background: url("./Unchecked.png") no-repeat;
+	background-size: 50%;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+	cursor: pointer;
+}
+input[type=checkbox]:checked + label {
+	background: url("./Сhecked.png") no-repeat;
+	background-size: 50%;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+	cursor: pointer;
+}
+.optional__section {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.checkbox__wrapper {
+	display: flex;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.checkbox__wrapper > span {
+	margin-left: -8px;
+}
+/**
+ * Media Section
+ */
+.media__section {
+	display: flex;
+	justify-content: space-between;
+}
+.media__photo, .media__video {
+	margin: 0 10px;
+}
+.media__section .label {
+	margin-bottom: 20px;
+}
+.application-form__btn {
+	display: block;
+	margin: 33px auto -33px;
+	border-radius: 3px;
+	padding: 20px 0;
+	text-align: center;
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+	text-decoration: none;
+}
+/**
+ * Screen Six
+ * Tinder Inerface
+ */
+.tinder__h2 {
+	font-weight: normal;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 24px;
+	line-height: 33px;
+	text-decoration: none;
+	color: #000;
+}
+.tinder__img {
+	display: block;
+	height: 231px;
+	margin: 50px auto 40px;
+}
+.tinder__price-block {
+	margin: 0 auto 50px;
+	text-align: center;
+}
+.tinder__price-label {
+	margin-left: 10px;
+}
+.tinder__controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tinder__control {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.tinder__btn {
+	cursor: pointer;
+}
+.tinder__control-hint {
+	white-space: nowrap;
+}
+/**
+ * Slider Styles
+ */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+/**
+ * Haltura
+ */
+.haltura__list {
+	margin-top: 25px;
+}
+.haltura__list li {
+	margin-bottom: 10px;
+}
+.haltura__h2 {
+	font-weight: normal;
+	margin: 0 auto 40px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 33px;
+}
+.haltura__controls {
+	margin: 30px 20px 0;
+}
+/**
+ * Master Task
+ */
+.white-block {
+	background: #fff;
+	margin: 0 25px;
+	border-radius: 3px;
+}
+.master-tasks__h2 {
+	font-weight: normal;
+	margin: -45px 25px 25px;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 33px;
+
+}
+.master-tasks__h3 {
+	font-weight: normal;
+	margin: 0 25px 0;
+	padding-top: 20px;
+	text-align: initial;
+	font-size: 18px;
+	line-height: 24px;
+
+}
+.master-tasks__budget {
+	margin: 0 25px;
+	padding-bottom: 25px;
+	font-weight: bold;
+}
+.master-tasks__budget-label {
+	margin-bottom: 7px;
+}
+.master-tasks__btn {
+	margin: 25px 25px 0;
+}
+.master-tasks__btn > a {
+	display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 20px 0;
+    text-align: center;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+}
+/**
+ * RadioButtons
+ */
+input[type=radio] {
+	display:none;
+}
+input[type=radio] + label {
+	background: url("./Radio.png") no-repeat;
+	background-size: 50%;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+	cursor: pointer;
+}
+input[type=radio]:checked + label {
+	background: url("./Radio_checked.png") no-repeat;
+	background-size: 50%;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+	cursor: pointer;
+}
+.radio__wrapper {
+	display: flex;
+	margin-left: 25px;
+}
+.radio__wrapper > span {
+	margin-left: -12px;
+}
+/**
+ * I can Master
+ */
+.i_can__h3 {
+	margin-bottom: 20px;
+	margin-left: 25px;
+	font-weight: normal;
+	font-size: 18px;
+}
+/**
+ * Problem Zones
+ */
+.problem-zones__img {
+	cursor: pointer;
+}
+.problem-zones__container {
+	background: url("./problem_zones.png") no-repeat;
+	max-width: 100%;
+	height: 355px;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+}
+.problem-zones__mark {
+	position: absolute;
+	cursor: pointer;
+}
+#mark1.problem-zones__mark {
+	left: 130px;
+    bottom: 80px;
+}
+#mark2.problem-zones__mark {
+	top: 87px;
+    right: 170px;
+}
+.problem-zones__dictation,
+.problem-zones__player {
+	max-width: 100%;
+	width: 100%;
+	cursor: pointer;
+}

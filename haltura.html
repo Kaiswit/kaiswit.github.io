@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="mobile-container content-indent">
+	<h2 style="font-size: 28px;" class="haltura__h2">Халтура</h2>
+	<!-- Google map -->
+	<div id="map" style="width:100%;height:440px"></div>
+	<!-- End of google map -->
+	<ul class="haltura__list">
+		<li>Прикрутить дверную ручку 200 р</li>
+		<li>Повесить полку 300 р</li>
+		<li>Починить кран 500 р</li>
+		<li>Прибить плинтус 200 р</li>
+	</ul>
+	<div class="haltura__controls">
+		<div class="place">
+			<span>Место</span>
+			<div class="range-filter">
+	            <div class="range-controls">
+	                <div class="scale">
+	                	<div class="bar"></div>
+	                </div>
+	                <div class="toggle min-toggle js-place-min-toggle">
+	                	<span class="min-price">0</span>
+	                </div>
+	                <div class="you-toggle js-place-you-toggle">
+	                	<span class="you-price js-place-you-price">10км</span></div>
+	                <div class="toggle max-toggle js-place-max-toggle">
+	                	<img class="ic" src="inf.png">
+	                </div>
+	            </div>
+	    	</div>
+		</div>
+		<div class="money">
+			<span>Деньги</span>
+			<div class="range-filter">
+	            <div class="range-controls">
+	                <div class="scale">
+	                	<div class="bar"></div>
+	                </div>
+	                <div class="toggle min-toggle js-money-min-toggle">
+	                	<span class="min-price">0</span>
+	                </div>
+	                <div class="you-toggle js-money-you-toggle">
+	                	<span class="you-price js-money-you-price">500р</span></div>
+	                <div class="toggle max-toggle js-money-max-toggle">
+	                	<img class="ic" src="inf.png">
+	                </div>
+	            </div>
+	    	</div>
+		</div>
+		<div class="time">
+			<span>Время</span>
+			<div class="range-filter">
+	            <div class="range-controls">
+	                <div class="scale">
+	                	<div class="bar"></div>
+	                </div>
+	                <div class="toggle min-toggle js-time-min-toggle">
+	                	<span class="min-price">0</span>
+	                </div>
+	                <div class="you-toggle js-time-you-toggle">
+	                	<span class="you-price js-time-you-price">3ч</span></div>
+	                <div class="toggle max-toggle js-time-max-toggle">
+	                	<img class="ic" src="inf.png">
+	                </div>
+	            </div>
+	    	</div>
+		</div>
+	<a class="application-form__btn btn--yellow" href="tasks_for_you.html" target="_blank">Найти работу</a>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1Zii99Nj7C5Ans2pLz2Iex3QiYBFQfpQ&callback=initMap"></script>
+<script type="text/javascript">
+
+/**
+ * Google map integration
+ *
+ * Can be found on pages:
+ * index.html, tours-html, tour-card.html, prices.html
+ */
+function initMap() {
+    var KomendantskiyProspekt = {lat: 60.008, lng: 30.259};
+    var Pionerskaya = {lat: 60.004, lng: 30.291};
+    var GrazhdanskyProspekt = {lat: 60.035, lng: 30.418};
+    var Akademicheskaya = {lat: 60.013, lng: 30.398};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: Akademicheskaya
+    });
+    var marker1 = new google.maps.Marker({
+        position: KomendantskiyProspekt,
+        map: map
+    });
+    var marker2 = new google.maps.Marker({
+        position: Pionerskaya,
+        map: map
+    });
+    var marker3 = new google.maps.Marker({
+        position: GrazhdanskyProspekt,
+        map: map
+    });
+}
+
+
+    $(".js-place-max-toggle").click(function(){
+	    if ($(".js-place-you-toggle").position().left < 110) {
+	    	$(".js-place-you-toggle").css("left", $(".js-place-you-toggle").position().left + 15);
+	    	$(".js-place-you-price").text(parseInt($(".js-place-you-price").html()) + 10 + "км.");
+	    } else {
+	    	return false;
+	    }
+    })
+    $(".js-place-min-toggle").click(function(){
+	    if ($(".js-place-you-toggle").position().left > 43) {
+	    	$(".js-place-you-toggle").css("left", $(".js-place-you-toggle").position().left - 15);
+	    	$(".js-place-you-price").text(parseInt($(".js-place-you-price").html()) - 10 + "км.");
+	    } else {
+	    	return false;
+	    }
+    })
+     $(".js-money-max-toggle").click(function(){
+	    if ($(".js-money-you-toggle").position().left < 110) {
+	    	$(".js-money-you-toggle").css("left", $(".js-money-you-toggle").position().left + 15);
+	    	$(".js-money-you-price").text(parseInt($(".js-money-you-price").html()) + 100 + "p.");
+	    } else {
+	    	return false;
+	    }
+    })
+    $(".js-money-min-toggle").click(function(){
+	    if ($(".js-money-you-toggle").position().left > 43) {
+	    	$(".js-money-you-toggle").css("left", $(".js-money-you-toggle").position().left - 15);
+	    	$(".js-money-you-price").text(parseInt($(".js-money-you-price").html()) - 100 + "p.");
+	    } else {
+	    	return false;
+	    }
+    })
+     $(".js-time-max-toggle").click(function(){
+	    if ($(".js-time-you-toggle").position().left < 110) {
+	    	$(".js-time-you-toggle").css("left", $(".js-time-you-toggle").position().left + 15);
+	    	$(".js-time-you-price").text(parseInt($(".js-time-you-price").html()) + 1 + "ч.");
+	    } else {
+	    	return false;
+	    }
+    })
+    $(".js-time-min-toggle").click(function(){
+	    if ($(".js-time-you-toggle").position().left > 43) {
+	    	$(".js-time-you-toggle").css("left", $(".js-time-you-toggle").position().left - 15);
+	    	$(".js-time-you-price").text(parseInt($(".js-time-you-price").html()) - 1 + "ч.");
+	    } else {
+	    	return false;
+	    }
+    })
+    </script>
+</body>
+</html>
